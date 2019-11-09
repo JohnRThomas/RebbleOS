@@ -6,7 +6,7 @@ if( NOT platform )
     set(platform snowy)
 endif()
 
-#TODO Is this needed for non-pebble platforms? Should it be moved to the platform specific flags?
+#TODO Is this needed for non-pebble platforms as it configre neographics? Should it be moved to the platform specific flags?
 # This needs to be before the platform include as it needs to be applied to any targets the platform generates.
 add_compile_options(-DNGFX_IS_CORE=1)
 

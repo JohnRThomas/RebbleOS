@@ -1,6 +1,7 @@
 # This platform needs the Pebble SDK compiler
 set(CMAKE_TOOLCHAIN_FILE toolchains/pebble_toolchain.cmake)
-# TODO Verify things work with the standard/modern version of gcc
+
+# TODO Verify things work with the standard/modern version of gcc and remove the dependency on pebble
 #set(CMAKE_TOOLCHAIN_FILE toolchains/arm_gcc_toolchain.cmake)
 
 # Set this platform's mcu
