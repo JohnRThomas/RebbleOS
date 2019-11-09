@@ -6,8 +6,8 @@
  */
 #include "rebbleos.h"
 #include "ngfxwrap.h"
+
 #include "overlay_manager.h"
-#include "ngfxwrap.h"
 
 /* A message to talk to the overlay thread */
 typedef struct OverlayMessage {

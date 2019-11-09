@@ -12,6 +12,7 @@
 #include "size.h"
 #include "animation.h"
 #include "click_config.h"
+#include "content_indicator.h"
 
 struct ScrollLayer;
 

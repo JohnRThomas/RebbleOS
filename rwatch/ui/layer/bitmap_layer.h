@@ -11,9 +11,9 @@
 #include "size.h"
 #include "gbitmap.h"
 
+
 struct Window;
 struct Layer;
-struct BitmapLayer;
 
 
 // TODO in neogfx?

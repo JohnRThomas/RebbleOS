@@ -10,12 +10,13 @@
 #include <stdlib.h>
 #include "rebbleos.h"
 #include "librebble.h"
-#include "appmanager.h"
 #include "systemapp.h"
 #include "test.h"
 #include "notification.h"
 #include "api_func_symbols.h"
 #include "qalloc.h"
+
+#include "appmanager.h"
 
 /* Configure Logging */
 #define MODULE_NAME "appman"

@@ -18,6 +18,8 @@
 #include "task.h"
 #include "queue.h"
 #include "buttons.h"
+#include "appmanager.h"
+#include "rebble_memory.h"
 
 #define STACK_SIZE_BUTTON_THREAD    configMINIMAL_STACK_SIZE + 210
 #define STACK_SIZE_BUTTON_DEBOUNCE  configMINIMAL_STACK_SIZE + 210

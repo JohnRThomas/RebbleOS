@@ -8,18 +8,13 @@
 #include "librebble.h"
 #include "click_config.h"
 
-typedef struct ButtonHolder {
-    ButtonId button_id;
-    ClickConfig click_config;
-} ButtonHolder;
-
 // we only have 4 buttons, so we can get away with a quick array lookup
-static ButtonHolder click_config[NUM_BUTTONS];
+static struct ButtonHolder click_config[NUM_BUTTONS];
 
 void window_single_click_subscribe(ButtonId button_id, ClickHandler handler)
 {
-    click_config[button_id].click.handler = handler;
-    click_config[button_id].click.repeat_interval_ms = 0;
+    click_config[button_id].click_config.click.handler = handler;
+    click_config[button_id].click_config.click.repeat_interval_ms = 0;
 }
 
 void window_single_repeating_click_subscribe(ButtonId button_id, uint16_t repeat_interval_ms, ClickHandler handler);
@@ -29,7 +24,7 @@ void window_raw_click_subscribe(ButtonId button_id, ClickHandler down_handler, C
 
 void window_invoke_single_click_cb(Window *window)
 {
-    if (window == null || window->click_config_provider == null)
+    if (window == NULL || window->click_config_provider == NULL)
         return;
     
     window->click_config_provider(window);

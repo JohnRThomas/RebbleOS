@@ -5,7 +5,9 @@
  */
 
 #include "librebble.h"
+#include "rebble_util.h"
 #include "node_list.h"
+
 #include "connection_service.h"
 
 static list_head _subscriber_list_head = LIST_HEAD(_subscriber_list_head);
