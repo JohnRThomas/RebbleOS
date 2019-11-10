@@ -1,11 +1,12 @@
 set (src_files 
-	croutine.c
-	event_groups.c
-	list.c
-	queue.c
-	tasks.c
-	timers.c
-	portable/GCC/ARM_CM4F/port.c
+    croutine.c
+    event_groups.c
+    list.c
+    queue.c
+    tasks.c
+    timers.c
+    portable/GCC/ARM_CM4F/port.c
+    portable/MemMang/heap_4.c
 )
 
 add_library(FreeRTOS STATIC ${src_files})

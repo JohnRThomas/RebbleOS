@@ -23,9 +23,11 @@ add_library(fpga_obj OBJECT IMPORTED)
 add_dependencies(fpga_obj fpga)
 set_target_properties(fpga_obj PROPERTIES IMPORTED_OBJECTS ${packaged_fpga_file})
 
+add_subdirectory(../snowy_family/ snowy/family)
+
 # Set up the snowy target
 set(src_files snowy.c snowy_bluetooth.c)
 add_library(snowy STATIC ${src_files})
-target_include_directories(snowy PUBLIC ./ ../snowy_family/)
+target_include_directories(snowy PUBLIC ./)
+target_link_libraries(snowy snowy_family)
 target_compile_options(snowy PRIVATE -DHSI_VALUE=16000000 -DREBBLE_PLATFORM=snowy -DREBBLE_PLATFORM_SNOWY)
-target_link_libraries(snowy fpga_obj rcore_headers stm32f4 drivers_stm32 btstack)

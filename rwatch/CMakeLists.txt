@@ -41,9 +41,11 @@ set (src_files
 
 add_library(rwatch ${src_files})
 target_link_libraries(rwatch ${platform} png ${neographics} resources)
-# TODO Maybe seperate src and include for rwatch so that there only needs to be one include level here.
-target_include_directories(rwatch PRIVATE ./ event graphics input ui ui/layer ui/notifications ui/animation 
-				          ${PROJECT_SOURCE_DIR}/Apps/System 
+
+# TODO Change this so only ./ is a PUBLIC include. Update includes in source files to specify the directories.
+#      This will help with ambiguity on where headers are when only looking at then source files. 
+target_include_directories(rwatch PUBLIC ./ event graphics input ui ui/layer ui/notifications ui/animation 
+                                  PRIVATE ${PROJECT_SOURCE_DIR}/Apps/System 
                                           ${PROJECT_SOURCE_DIR}/Apps/System/tests 
 					  ${PROJECT_SOURCE_DIR}/lib/neographics/contrib
 					  ${PROJECT_SOURCE_DIR}/lib/neographics/src

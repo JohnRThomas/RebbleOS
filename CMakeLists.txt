@@ -69,12 +69,11 @@ set_target_properties(${neographics} PROPERTIES EXCLUDE_FROM_ALL 0)
 add_subdirectory(FreeRTOS)
 #add_subdirectory(res)
 include(res.cmake)
+include(version.cmake)
 
 add_subdirectory(rcore)
 add_subdirectory(rwatch)
-# TODO make this a proper target
 add_subdirectory(Apps/System)
-
-#TODO add version target
+add_subdirectory(Watchfaces)
 
 #TODO add pbz target

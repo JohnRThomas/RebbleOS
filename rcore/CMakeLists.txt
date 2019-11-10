@@ -43,13 +43,12 @@ set (src_files
 )
 
 add_executable(rcore ${src_files})
-target_link_libraries(rcore FreeRTOS ${neographics} minilib png rwatch strftime ${platform} resources qemu)
-#TODO Do not directly include Apps/System it should be it's own target and specified via target_link_libraries
+# TODO Make the drivers work generically.
+target_link_libraries(rcore FreeRTOS apps ${neographics} minilib png rwatch strftime ${platform} resources qemu drivers_stm32 version watchfaces)
 target_include_directories(rcore PUBLIC ./ protocol service 
-				 PRIVATE ${PROJECT_SOURCE_DIR}/Apps/System 
-                                         ${PROJECT_SOURCE_DIR}/Apps/System/tests 
-					 ${PROJECT_SOURCE_DIR}/lib/neographics/src
+				 PRIVATE ${PROJECT_SOURCE_DIR}/lib/neographics/src
 					 ${PROJECT_SOURCE_DIR}/lib/neographics/contrib
+					 ${PROJECT_SOURCE_DIR}/lib/neographics/src/text
 					 ${PROJECT_SOURCE_DIR}/lib/neographics/src/types)
 
 add_library(rcore_headers INTERFACE)
