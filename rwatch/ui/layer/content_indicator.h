@@ -1,5 +1,7 @@
 #pragma once
 
+#include "types/color.h"
+#include "layer/layer.h"
 #include "pebble_defines.h"
 
 typedef struct GColourPair

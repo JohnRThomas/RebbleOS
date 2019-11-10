@@ -13,6 +13,8 @@
 #include "rect.h"
 #include "size.h"
 #include "node_list.h"
+#include "graphics/gbitmap.h"
+#include "input/click_config.h"
 
 struct Layer;
 struct Window;

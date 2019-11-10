@@ -6,7 +6,7 @@
  * Author: Barry Carter <barry.carter@gmail.com>
  */
 
-#include "librebble.h"
+//#include "librebble.h"
 #include "point.h"
 #include "rect.h"
 #include "size.h"

@@ -11,6 +11,8 @@
 #include "size.h"
 #include "window.h"
 
+#include "pebble_defines.h"
+
 struct Layer;
 
 // Callback for the layer drawing

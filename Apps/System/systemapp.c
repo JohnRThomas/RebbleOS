@@ -6,12 +6,14 @@
  */
 
 #include "rebbleos.h"
-#include "systemapp.h"
-#include "menu.h"
 #include "status_bar_layer.h"
 #include "platform_config.h"
 #include "platform_res.h"
 #include "node_list.h"
+#include "graphics/system_font.h"
+
+#include "menu.h"
+#include "systemapp.h"
 
 extern void flash_dump(void);
 extern const char git_version[];
